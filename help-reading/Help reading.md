@@ -7,7 +7,7 @@
 ## 数据库
 
 数据表：在关系型数据库系统中，一个关系就是一个表，表结构指的是数据库的关系模型。表是若干列（Column）和若干行（Row）的集合，每一行代表一个唯一的记录，每一列代表一个字段(field)，注意每个字段中的数据必须具有相同的数据类型。
-<br/>![数据库表](img_2.png)<br/>
+<br/>![数据库表](Database table.png)<br/>
 Column：数据库表的一列
 
 Field：表中的一个字段，记录的一个属性
@@ -41,7 +41,7 @@ REAL：就是DOUBLE ，如果SQL服务器模式包括REAL_AS_FLOAT选项，REAL�
 
 Path：存储对象在父子关系中的路径，用于定位查找某一对象。
 因为项目里面的组织架构表没有保存组织路径，导致写sql查询不易查询上下级所属的数据，因此在组织架构表里面添加了path字段，用来保存该组织的路径path值，然后写存储过程对已有的数据进行了path值的生成：
-<br/>![Path](img_1.png)
+<br/>![Path](Path.png)
 
 DDL
 （Data Definition Language） 数据定义语言，主要是进行定义/改变表的结构、数据类型、表之间的链接等操作。常用的语句关键字有 CREATE、DROP、ALTER 等。
@@ -128,7 +128,7 @@ Avatica：是一个构建数据库Driver的框架。作为Calcite的子项目，
 JDBC：（Java DataBase Connectivity）Java数据库连接技术。具体讲就是通过Java连接广泛的数据库，并对表中数据执行增、删、改、查等操作的技术。jdbc是一个规范（接口）而不是一个实现（类），由Sum公司提供一套完整的接口，由数据库厂商根据特点予以实现。为什么JDBC只有接口，没有提供实现？不同数据库的底层技术不同，不少数据库是闭源的，源代码不公开的。Sun公司无力为所有数据库提供具体实现，只能提供接口而由数据库厂商提供具体实现，Sun公司只是制定JDBC标准，各个厂商准守标准提供具体的实现。JDBC和数据库实现的关系就好比List接口和ArrayList、LinkedList之间的关系
 <br/>
 <br/>
-![JDBC连接流程](img_3.png)
+![JDBC连接流程](JDBC connection.png)
 
 
 使用JDBC连接数据库并进行查询流程：
@@ -192,13 +192,13 @@ Flink流批一体：虽然Flink底层DataStream和DataSet的API是分开的，�
 <br/>
 
 ## 学习博客
-【Jackson】@JsonCreator 注解_绝世好阿狸的博客-CSDN博客
+【Jackson】@JsonCreator 注解_绝世好阿狸的博客-CSDN博客<br/>
 <https://blog.csdn.net/u010900754/article/details/105859959?ops_request_misc=&request_id=&biz_id=102&utm_term=JsonCreator&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-105859959.142%5ev65%5ejs_top,201%5ev3%5econtrol_2,213%5ev2%5et3_control1&spm=1018.2226.3001.4187>
 <br/><br/>
-java 中 BigDecimal 详解_这辈子_安静的努力着的博客-CSDN博客
+java 中 BigDecimal 详解_这辈子_安静的努力着的博客-CSDN博客<br/>
 <https://blog.csdn.net/qq_35868412/article/details/89029288?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166877763116782428616427%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166877763116782428616427&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-89029288-null-null.142%5ev65%5ejs_top,201%5ev3%5econtrol_2,213%5ev2%5et3_control1&utm_term=bigDecimal&spm=1018.2226.3001.4187>
 <br/><br/>
-mysql中游标的使用案例详解（学习笔记）_徐守威的博客-CSDN博客
+mysql中游标的使用案例详解（学习笔记）_徐守威的博客-CSDN博客<br/>
 <https://blog.csdn.net/xushouwei/article/details/52201360>
 <br/><br/>
 元数据(MetaData)学习_chenkefo的博客-CSDN博客<br/>
@@ -213,31 +213,31 @@ Java中hashCode的作用_冯立彬的博客-CSDN博客<br/>
 Calcite-学习笔记（入门篇）_R&Y的博客-CSDN博客<br/>
 <https://blog.csdn.net/qq_34226628/article/details/124487489?ops_request_misc=&request_id=&biz_id=102&utm_term=calcite&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-124487489.142%5ev65%5ejs_top,201%5ev3%5econtrol_2,213%5ev2%5et3_control1&spm=1018.2226.3001.4187>
 <br/><br/>
-calcite sqlNode 和relNode 区别_拯救大黄的博客-CSDN博客
+calcite sqlNode 和relNode 区别_拯救大黄的博客-CSDN博客<br/>
 <https://blog.csdn.net/weixin_41163951/article/details/122278187?ops_request_misc=&request_id=&biz_id=102&utm_term=rexliteral&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-122278187.142%5ev66%5ejs_top,201%5ev3%5econtrol_2,213%5ev2%5et3_control1&spm=1018.2226.3001.4187>
 <br/><br/>
-【Calcite】Apache Calcite 框架初探及概念详解_董嘻嘻的博客-CSDN博客
+【Calcite】Apache Calcite 框架初探及概念详解_董嘻嘻的博客-CSDN博客<br/>
 <https://blog.csdn.net/yiyezhiqiu167/article/details/120833071>
 <br/><br/>
 Apache Calcite整体架构及处理流程 - Liebing's Blog<br/>
 <https://liebing.org.cn/2022/05/02/2022/apache_calcite_overall/>
 <br/><br/>
-Java static关键字与static{}语句块_MrDJun的博客-CSDN博客
+Java static关键字与static{}语句块_MrDJun的博客-CSDN博客<br/>
 <https://blog.csdn.net/qq_41647999/article/details/87966487?ops_request_misc=&request_id=&biz_id=102&utm_term=static%7B%7D&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-87966487.142%5ev65%5ejs_top,201%5ev3%5econtrol_2,213%5ev2%5et3_control1&spm=1018.2226.3001.4187>
 <br/><br/>
-statement的概念及常用方法_我服了这代码我真看不懂的博客-CSDN博客_statement方法
+statement的概念及常用方法_我服了这代码我真看不懂的博客-CSDN博客_statement方法<br/>
 <https://blog.csdn.net/x1339874968/article/details/119186663?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166894871916782428654055%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166894871916782428654055&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-2-119186663-null-null.142%5ev65%5ejs_top,201%5ev3%5econtrol_2,213%5ev2%5et3_control1&utm_term=statement&spm=1018.2226.3001.4187>
 <br/><br/>
-JDBC核心API详解之Connection类和Statement类_昱晟168的博客-CSDN博客
+JDBC核心API详解之Connection类和Statement类_昱晟168的博客-CSDN博客<br/>
 <https://blog.csdn.net/weixin_47267628/article/details/121735236?ops_request_misc=&request_id=&biz_id=102&utm_term=%E6%95%B0%E6%8D%AE%E5%BA%93statement%20connection&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-121735236.142%5ev65%5ejs_top,201%5ev3%5econtrol_2,213%5ev2%5et3_control1&spm=1018.2226.3001.4187>
 <br/><br/>
 JDBC核心技术一（概述）_wegofun的博客-CSDN博客<br/>
 <https://blog.csdn.net/wegofun/article/details/117122870>
 <br/><br/>
-33张图解flink sql应用提交（建议收藏！）_浪尖聊大数据-浪尖的博客-CSDN博客
+33张图解flink sql应用提交（建议收藏！）_浪尖聊大数据-浪尖的博客-CSDN博客<br/>
 <https://blog.csdn.net/rlnLo2pNEfx9c/article/details/120775316>
 <br/><br/>
-Flink TableAPI和SQL（十八）UDF（二）标量函数（Scalar Functions）_Alienware^的博客-CSDN博客
+Flink TableAPI和SQL（十八）UDF（二）标量函数（Scalar Functions）_Alienware^的博客-CSDN博客<br/>
 <https://blog.csdn.net/weixin_45417821/article/details/124656535?ops_request_misc=&request_id=&biz_id=102&utm_term=scalar%20function&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-124656535.nonecase&spm=1018.2226.3001.4187>
 <br/><br/>
 Java设计模式之创建型：工厂模式详解（简单工厂+工厂方法+抽象工厂）_张维鹏的博客-CSDN博客_java工厂模式详解<br/>
